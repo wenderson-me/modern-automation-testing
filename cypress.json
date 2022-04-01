@@ -1,7 +1,9 @@
 {
   "baseUrl": "https://rahulshettyacademy.com/seleniumPractise/#/",
-  "defaultCommandTimeout": "9000",
+  "defaultCommandTimeout": 9000,
   "chromeWebSecurity": true,
+  "watchForFileChanges": true,
+  "experimentalSourceRewriting": true,
   "video": false,
   "screeshot": false,
   "downloadsFolder": "cypress/downloads",
@@ -11,5 +13,9 @@
   "supportFile": "cypress/support/index.js",
   "videosFolder": "cypress/videos",
   "screenshotsFolder": "cypress/screenshots",
-  "waitForAnimations": true
+  "waitForAnimations": true,
+  "reporter": "nyan",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
 }

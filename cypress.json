@@ -1,0 +1,15 @@
+{
+  "baseUrl": "https://rahulshettyacademy.com/seleniumPractise/#/",
+  "defaultCommandTimeout": "9000",
+  "chromeWebSecurity": true,
+  "video": false,
+  "screeshot": false,
+  "downloadsFolder": "cypress/downloads",
+  "fixturesFolder": "cypress/fixtures",
+  "integrationFolder": "cypress/integration",
+  "pluginsFile": "cypress/plugins/index.js",
+  "supportFile": "cypress/support/index.js",
+  "videosFolder": "cypress/videos",
+  "screenshotsFolder": "cypress/screenshots",
+  "waitForAnimations": true
+}

@@ -1,6 +1,7 @@
 /// <reference types="cypress"/>
 
 import homePage from '../pageObjects/homePage'
+import productPage from '../pageObjects/productPage'
 
 describe('Framework', () => {
   beforeEach(function () {
@@ -21,6 +22,19 @@ describe('Framework', () => {
 
     this.data.productName.forEach((element) => {
       cy.addProductCart(element)
+    })
+
+    productPage.checkOutButton().click();
+    cy.contains("Checkout").click();
+    cy.get('input#country').type(this.data.country);
+    cy.get('.suggestions > ul > li > a').click();
+    cy.get('#checkbox2').check({ force: true }).should('be.checked');
+    cy.get('input[value="Purchase"]').click();
+    //cy.get('div.alert-success').should('be.visible').should('contain', 'Success! Thank you!');
+    cy.get('div.alert-success').then((text) => {
+      const actualText = text.text()
+      expect(actualText.includes('Success')).to.be.true
+      cy.log('Test passed')
     })
   })
 

@@ -1,4 +1,4 @@
-class HomePage {
+class homePage {
   getEditBox() {
     return cy.get("form input[name='name']")
   }
@@ -24,4 +24,4 @@ class HomePage {
   }
 }
 
-export default new HomePage()
+export default new homePage()

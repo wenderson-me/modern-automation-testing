@@ -2,7 +2,7 @@
 
 describe('Practice page', () => {
   it('Get and verify inputs', () => {
-    cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
+    cy.visit(Cypress.env('url') + '/AutomationPractice/')
 
     /**
      * Checkbox

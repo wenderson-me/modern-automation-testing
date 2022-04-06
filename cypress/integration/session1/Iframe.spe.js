@@ -2,7 +2,7 @@
 ///<reference types="cypress-iframe" />
 describe('Iframe', () => {
   it('Manupilating Iframe', () => {
-    cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
+    cy.visit(Cypress.env('url') + '/AutomationPractice/');
 
     cy.frameLoaded('#courses-iframe');
 

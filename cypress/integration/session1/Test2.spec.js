@@ -2,7 +2,7 @@
 
 describe('my second test suite', () => {
   it('my second test case', () => {
-    cy.visit('/')
+    cy.visit(Cypress.env('url') + '/seleniumPractise/#/')
     cy.get('input.search-keyword').type('ca')
     cy.wait(2000)
     cy.get('.products')

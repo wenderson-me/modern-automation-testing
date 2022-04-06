@@ -5,7 +5,7 @@ describe('Get content in tables', () => {
     /**
      * Hadling tables using each command
      */
-    cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
+    cy.visit(Cypress.env('url') + '/AutomationPractice/')
 
     cy.get('tr td:nth-child(2)').each(($e1, index) => {
       const text = $e1.text()

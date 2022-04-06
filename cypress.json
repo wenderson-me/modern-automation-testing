@@ -1,5 +1,7 @@
 {
-  "baseUrl": "https://rahulshettyacademy.com/seleniumPractise/#/",
+  "env": {
+    "url": "https://rahulshettyacademy.com"
+  },
   "defaultCommandTimeout": 9000,
   "chromeWebSecurity": false,
   "watchForFileChanges": true,

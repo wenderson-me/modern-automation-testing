@@ -2,7 +2,7 @@
 
 describe('Tabs Windows', () => {
   it('Tabs Windows', () => {
-    cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
+    cy.visit(Cypress.env('url') + '/AutomationPractice/')
 
     cy.get('#opentab').then((el) => {
       const url = el.prop('href')

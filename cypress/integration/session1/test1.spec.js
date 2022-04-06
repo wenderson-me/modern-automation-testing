@@ -2,7 +2,7 @@
 
 describe('my first test suite', () => {
   it('my first test case', () => {
-    cy.visit('/')
+    cy.visit(Cypress.env('url') + '/seleniumPractise/#/')
 
     cy.get('.products').as('productLocator')
 

@@ -11,7 +11,7 @@ describe('Framework', () => {
   });
 
   it('start test with building', function () {
-    cy.visit('https://rahulshettyacademy.com/angularpractice/')
+    cy.visit(Cypress.env('url') + '/angularpractice/');
 
     homePage.getEditBox().should('have.attr', 'minlength', '2');
     homePage.getEditBox().type(this.data.name);

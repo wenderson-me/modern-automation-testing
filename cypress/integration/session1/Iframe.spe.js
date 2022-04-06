@@ -1,6 +1,6 @@
 ///<reference types="cypress"/>
 ///<reference types="cypress-iframe" />
-describe('Iframe', () => {
+describe.skip('Iframe', () => {
   it('Manupilating Iframe', () => {
     cy.visit(Cypress.env('url') + '/AutomationPractice/');
 

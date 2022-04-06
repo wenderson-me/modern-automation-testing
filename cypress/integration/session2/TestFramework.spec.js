@@ -1,7 +1,7 @@
 /// <reference types="cypress"/>
 
-import homePage from '../pageObjects/homePage'
-import productPage from '../pageObjects/productPage'
+import homePage from '../../support/pageObjects/homePage'
+import productPage from '../../support/pageObjects/productPage'
 
 describe('Framework', () => {
   beforeEach(function () {

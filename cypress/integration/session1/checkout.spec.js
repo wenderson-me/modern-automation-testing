@@ -3,14 +3,14 @@
 import homePage from '../../support/pageObjects/homePage'
 import productPage from '../../support/pageObjects/productPage'
 
-describe('Framework', () => {
+describe('Checkout', () => {
   beforeEach(function () {
     cy.fixture('example').then((data) => {
       this.data = data
     });
   });
 
-  it('start test with building', function () {
+  it('Fill form and checkout', function () {
     cy.visit(Cypress.env('url') + '/angularpractice/');
 
     homePage.getEditBox().should('have.attr', 'minlength', '2');

@@ -1,7 +1,7 @@
 /// <reference types="cypress"/>
 
-describe('my second test suite', () => {
-  it('my second test case', () => {
+describe('Search product', () => {
+  it('Search product', () => {
     cy.visit(Cypress.env('url') + '/seleniumPractise/#/')
     cy.get('input.search-keyword').type('ca')
     cy.wait(2000)

@@ -1,7 +1,7 @@
 /// <reference types="cypress"/>
 
-describe('my first test suite', () => {
-  it('my first test case', () => {
+describe('Add product to cart', () => {
+  it('Add product', () => {
     cy.visit(Cypress.env('url') + '/seleniumPractise/#/')
 
     cy.get('.products').as('productLocator')

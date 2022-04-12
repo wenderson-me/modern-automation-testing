@@ -20,8 +20,9 @@
   "responseTimeout": 15000,
   "requestTimeout": 15000,
   "failOnStatusCode": false,
-  "reporter": "nyan",
+  "reporter": "cypress-multi-reporters",
   "reporterOptions": {
     "configFile": "reporter-config.json"
-  }
+  },
+  "projectId": "75kc2i"
 }

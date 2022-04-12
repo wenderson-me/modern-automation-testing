@@ -9,7 +9,7 @@ describe('Tabs Windows', () => {
 
       cy.log(url)
       cy.visit(url)
-      // cy.go("back");
+      cy.go("back");
     })
   })
 })

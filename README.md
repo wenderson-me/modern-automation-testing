@@ -3,23 +3,23 @@
 </h1>
 <p align="center">🚀 E2E Testing</p>
 
-### Pré-requisitos ⚙️
+### Requirements ⚙️
 
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e [Cypress](https://cypress.io/).
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+Before starting, you will need to have the following tools installed on your machine:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) and [Cypress](https://cypress.io/).
+Besides this, it is good to have an editor to work with the code, such as [VSCode](https://code.visualstudio.com/)
 
 ```ruby
-# Clone este repositório
+# Clone this repository
 $ git clone <https://github.com/wenderson-me/modern-automation-testing.git>
 
-# Instale as dependências
+# Install dependencies
 $ npm install
 
-# Execute a aplicação no navegador
+# Run the application in the browser
 $ npm run cy:open
 
-# Execute a aplicação em modo headless
+# Run the application in headless mode
 $ npm run cy:run
 
 ```

@@ -1,12 +1,10 @@
 ///<reference types="cypress"/>
-describe.skip('Iframe', () => {
+describe('Iframe', () => {
   it('Manupilating Iframe', () => {
     cy.visit(Cypress.env('url') + '/AutomationPractice/');
-
     cy.frameLoaded('#courses-iframe');
-
-    cy.iframe().find('a[href="#/mentorship"]').eq(0).click();
-
-    cy.iframe().find('h1.pricing-title').should('have.length', 2);
+    cy.iframe().find('a[href="/mentorship"]').eq(0).click();
+    cy.wait(500);
+    cy.iframe().find('div h1.pricing-title').should('have.length', 2);
   })
 })

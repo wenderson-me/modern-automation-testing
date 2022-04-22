@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T04:16:28.845Z",
-    "end": "2022-04-22T04:16:32.478Z",
-    "duration": 3633,
+    "start": "2022-04-22T04:28:09.687Z",
+    "end": "2022-04-22T04:28:13.666Z",
+    "duration": 3979,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "0dba5ae0-3770-421c-944c-aae49824e9c3",
+      "uuid": "0d02c655-1f96-4923-b0c9-2a1eae39da0a",
       "title": "",
       "fullFile": "cypress/integration/intercept/getBook.spec.js",
       "file": "cypress/integration/intercept/getBook.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "54aed247-61e7-423b-966a-ae2b8c0be4b8",
+          "uuid": "8e3f19d4-9f8e-482a-8c8d-c74150b49eb2",
           "title": "API",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Get book",
               "fullTitle": "API Get book",
               "timedOut": null,
-              "duration": 1575,
+              "duration": 1732,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit(Cypress.env('url') + '/angularAppdemo/');\ncy.intercept({\n  method: 'GET',\n  url: 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty'\n}, {\n  statusCode: 200,\n  body: [{\n    book_name: \"RestAssured with Java\",\n    isbn: \"RSU\",\n    aisle: \"2301\"\n  }]\n}).as('getBooks');\ncy.get('button[routerlink=\"/library\"]').click();\ncy.wait('@getBooks');\ncy.get('p').should('have.text', 'Oops only 1 Book available');",
               "err": {},
-              "uuid": "1974140a-7e29-4557-90a6-e03924d2ccdb",
-              "parentUUID": "54aed247-61e7-423b-966a-ae2b8c0be4b8",
+              "uuid": "c2753e86-157a-4f6c-9203-b875fc1ba677",
+              "parentUUID": "8e3f19d4-9f8e-482a-8c8d-c74150b49eb2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1974140a-7e29-4557-90a6-e03924d2ccdb"
+            "c2753e86-157a-4f6c-9203-b875fc1ba677"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1575,
+          "duration": 1732,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

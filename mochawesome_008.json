@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T04:18:12.178Z",
-    "end": "2022-04-22T04:18:20.356Z",
-    "duration": 8178,
+    "start": "2022-04-22T04:30:03.823Z",
+    "end": "2022-04-22T04:30:13.247Z",
+    "duration": 9424,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "433ea55b-9f09-4e78-b6fc-80b4d3f3c23a",
+      "uuid": "5b9e649d-276a-428e-94e3-7c6b98fb94f3",
       "title": "",
       "fullFile": "cypress/integration/session1/tabsWindows.js",
       "file": "cypress/integration/session1/tabsWindows.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "561e21ef-a721-4ab8-89e1-25778a8e0d41",
+          "uuid": "a1cfe50c-b810-4adf-83bb-dd715a64fff8",
           "title": "Tabs Windows",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Tabs Windows",
               "fullTitle": "Tabs Windows Tabs Windows",
               "timedOut": null,
-              "duration": 6660,
+              "duration": 7393,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit(Cypress.env('url') + '/AutomationPractice/');\ncy.get('#opentab').then(el => {\n  const url = el.prop('href');\n  cy.log(url);\n  cy.visit(url);\n  cy.go(\"back\");\n});",
               "err": {},
-              "uuid": "c0446736-f213-43c5-9036-e06528fedfdc",
-              "parentUUID": "561e21ef-a721-4ab8-89e1-25778a8e0d41",
+              "uuid": "2b3b77b1-455e-4583-b310-4b4ae67dd4b9",
+              "parentUUID": "a1cfe50c-b810-4adf-83bb-dd715a64fff8",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c0446736-f213-43c5-9036-e06528fedfdc"
+            "2b3b77b1-455e-4583-b310-4b4ae67dd4b9"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6660,
+          "duration": 7393,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

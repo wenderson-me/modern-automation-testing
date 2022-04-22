@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T04:18:04.853Z",
-    "end": "2022-04-22T04:18:11.038Z",
-    "duration": 6185,
+    "start": "2022-04-22T04:29:55.584Z",
+    "end": "2022-04-22T04:30:02.624Z",
+    "duration": 7040,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4269f7e5-5cb9-45a7-8186-89a7eda36efa",
+      "uuid": "f66c0587-d216-4178-a1a6-4ae5b146b351",
       "title": "",
       "fullFile": "cypress/integration/session1/tables.spec.js",
       "file": "cypress/integration/session1/tables.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1d21d33e-f688-4475-a8a2-5e8910024c67",
+          "uuid": "e3f3179b-b214-4afc-a1ab-4e88b0bca082",
           "title": "Get content in tables",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Get Title and Number in table",
               "fullTitle": "Get content in tables Get Title and Number in table",
               "timedOut": null,
-              "duration": 4729,
+              "duration": 5498,
               "state": "passed",
-              "speed": "fast",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "/**\n * Hadling tables using each command\n */\ncy.visit(Cypress.env('url') + '/AutomationPractice/');\ncy.get('tr td:nth-child(2)').each(($e1, index) => {\n  const text = $e1.text();\n  if (text.includes('Python')) {\n    cy.get('tr td:nth-child(2)').eq(index).next().then(price => {\n      expect(price.text(), 'Preço').to.equal('25');\n    });\n  }\n});",
               "err": {},
-              "uuid": "631142d5-b39f-4840-a70f-3eba4a7aa52a",
-              "parentUUID": "1d21d33e-f688-4475-a8a2-5e8910024c67",
+              "uuid": "b76e5b04-3d7c-4965-9776-49460a145ab5",
+              "parentUUID": "e3f3179b-b214-4afc-a1ab-4e88b0bca082",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "631142d5-b39f-4840-a70f-3eba4a7aa52a"
+            "b76e5b04-3d7c-4965-9776-49460a145ab5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4729,
+          "duration": 5498,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

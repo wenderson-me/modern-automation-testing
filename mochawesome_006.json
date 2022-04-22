@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T04:17:57.549Z",
-    "end": "2022-04-22T04:18:03.692Z",
-    "duration": 6143,
+    "start": "2022-04-22T04:29:48.071Z",
+    "end": "2022-04-22T04:29:54.423Z",
+    "duration": 6352,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e09cff90-e083-4e29-bf89-3b5e540fb75f",
+      "uuid": "80d91b5c-b7aa-4d3d-851b-b6d4309d042d",
       "title": "",
       "fullFile": "cypress/integration/session1/searchProduct.spec.js",
       "file": "cypress/integration/session1/searchProduct.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "434a3469-c6e5-49da-b592-76759441e4b9",
+          "uuid": "7b07bd1f-effb-462b-ba86-bd1435aa3051",
           "title": "Search product",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Search product",
               "fullTitle": "Search product Search product",
               "timedOut": null,
-              "duration": 4864,
+              "duration": 5010,
               "state": "passed",
-              "speed": "fast",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit(Cypress.env('url') + '/seleniumPractise/#/');\ncy.get('input.search-keyword').type('ca');\ncy.wait(2000);\ncy.get('.products').find('.product').each($el => {\n  const textVeg = $el.find('h4.product-name').text();\n  if (textVeg.includes('Cashews')) {\n    cy.wrap($el).find('button').click();\n  }\n});\ncy.get('.cart-icon > img').click();\ncy.contains('PROCEED TO CHECKOUT').click();\ncy.contains('Place Order').click();",
               "err": {},
-              "uuid": "196d8d9a-cc03-4a54-b1ed-8cc82c6e151e",
-              "parentUUID": "434a3469-c6e5-49da-b592-76759441e4b9",
+              "uuid": "680159bb-36a5-4535-949b-d09f6bea6304",
+              "parentUUID": "7b07bd1f-effb-462b-ba86-bd1435aa3051",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "196d8d9a-cc03-4a54-b1ed-8cc82c6e151e"
+            "680159bb-36a5-4535-949b-d09f6bea6304"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4864,
+          "duration": 5010,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T05:14:56.830Z",
-    "end": "2022-04-22T05:15:02.844Z",
-    "duration": 6014,
+    "start": "2022-04-22T05:51:37.606Z",
+    "end": "2022-04-22T05:51:44.044Z",
+    "duration": 6438,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f2dd0655-bf66-4013-9d4e-c0d210f3135e",
+      "uuid": "f5ab4ba5-d2ee-4b05-a49a-3213145d200e",
       "title": "",
       "fullFile": "cypress/integration/session1/mouseHover.js",
       "file": "cypress/integration/session1/mouseHover.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8abc6e4a-d269-41e0-9414-fd221e89d539",
+          "uuid": "433f9c70-24f1-4ee2-9b20-55eb791e10d2",
           "title": "Mouse Hover",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Click in button hover",
               "fullTitle": "Mouse Hover Click in button hover",
               "timedOut": null,
-              "duration": 4522,
+              "duration": 4799,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit(Cypress.env('url') + '/AutomationPractice/');\ncy.get('.mouse-hover-content').invoke('show');\ncy.contains('Top').click();\ncy.url().should('include', 'top');",
               "err": {},
-              "uuid": "ab998d6e-1f75-4214-92d9-937be7ef7e05",
-              "parentUUID": "8abc6e4a-d269-41e0-9414-fd221e89d539",
+              "uuid": "ef7bb6fa-bb5c-4233-95ad-144496abafe9",
+              "parentUUID": "433f9c70-24f1-4ee2-9b20-55eb791e10d2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ab998d6e-1f75-4214-92d9-937be7ef7e05"
+            "ef7bb6fa-bb5c-4233-95ad-144496abafe9"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4522,
+          "duration": 4799,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

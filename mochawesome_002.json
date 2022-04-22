@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T05:13:41.782Z",
-    "end": "2022-04-22T05:14:31.995Z",
-    "duration": 50213,
+    "start": "2022-04-22T05:50:19.182Z",
+    "end": "2022-04-22T05:51:10.316Z",
+    "duration": 51134,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "a471098b-3dfa-434d-87eb-57916afd4446",
+      "uuid": "af35e93d-e264-4ff2-a5e7-885b0b7cbaef",
       "title": "",
       "fullFile": "cypress/integration/session1/checkout.spec.js",
       "file": "cypress/integration/session1/checkout.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "858182c9-5083-4dec-818e-46c30665156e",
+          "uuid": "6201ffc8-150c-40e6-b818-59845e2a1de6",
           "title": "Checkout",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Fill form and checkout",
               "fullTitle": "Checkout Fill form and checkout",
               "timedOut": null,
-              "duration": 48876,
+              "duration": 49663,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit(Cypress.env('url') + '/angularpractice/');\n_homePage.default.getEditBox().should('have.attr', 'minlength', '2');\n_homePage.default.getEditBox().type(this.data.name);\n_homePage.default.getTwoDataBinding().should('have.value', this.data.name);\n_homePage.default.getPassword().type(this.data.password, {\n  log: false\n});\n_homePage.default.getGender().select(this.data.gender);\n_homePage.default.getEntrepreneaur().should('be.disabled');\n_homePage.default.getShopTab().click();\nthis.data.productName.forEach(element => {\n  cy.addProductCart(element);\n});\n_productPage.default.checkOutButton().click();\nvar sum = 0;\ncy.get('tr td:nth-child(4) strong').each($el => {\n  const amount = $el.text();\n  var res = amount.split(\" \");\n  res = res[1].trim();\n  sum = sum + parseInt(res);\n}).then(() => {\n  cy.get('tr td:nth-child(5) strong').should('have.text', `₹. ${sum}`); //sum is the total amount\n});\ncy.contains(\"Checkout\").click();\ncy.get('input#country').type(this.data.country);\ncy.get('.suggestions > ul > li > a').click();\ncy.get('#checkbox2').check({\n  force: true\n}).should('be.checked');\ncy.get('input[value=\"Purchase\"]').click(); //cy.get('div.alert-success').should('be.visible').should('contain', 'Success! Thank you!');\ncy.get('div.alert-success').then(text => {\n  const actualText = text.text();\n  expect(actualText.includes('Success')).to.be.true;\n  cy.log('Test passed');\n});",
               "err": {},
-              "uuid": "f8e419dd-06b8-41ca-ab7d-a9374a277488",
-              "parentUUID": "858182c9-5083-4dec-818e-46c30665156e",
+              "uuid": "bba667cb-1a51-4ec8-8597-01cbc0f16d66",
+              "parentUUID": "6201ffc8-150c-40e6-b818-59845e2a1de6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f8e419dd-06b8-41ca-ab7d-a9374a277488"
+            "bba667cb-1a51-4ec8-8597-01cbc0f16d66"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 48876,
+          "duration": 49663,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

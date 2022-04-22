@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "tests": 2,
+    "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T05:13:27.733Z",
-    "end": "2022-04-22T05:13:31.562Z",
-    "duration": 3829,
-    "testsRegistered": 1,
+    "start": "2022-04-22T05:50:02.860Z",
+    "end": "2022-04-22T05:50:07.581Z",
+    "duration": 4721,
+    "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "70fdeeb0-e52a-402a-95d4-d777acf1402d",
+      "uuid": "ab7a68a2-ca36-4f27-b9eb-40fd00294acf",
       "title": "",
       "fullFile": "cypress/integration/intercept/getBook.spec.js",
       "file": "cypress/integration/intercept/getBook.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a51e711c-102e-42dc-917f-7de067420086",
+          "uuid": "ebd46da4-3d33-4f13-bdcd-42994796a3cf",
           "title": "Intercept",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,48 @@
               "title": "Get book",
               "fullTitle": "Intercept Get book",
               "timedOut": null,
-              "duration": 1627,
+              "duration": 1695,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.visit(Cypress.env('url') + '/angularAppdemo/');\ncy.intercept({\n  method: 'GET',\n  url: 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty'\n}, {\n  statusCode: 200,\n  body: [{\n    book_name: \"Clean Code\",\n    isbn: \"CC\",\n    aisle: \"2301\"\n  }]\n}).as('getBooks');\ncy.get('button[routerlink=\"/library\"]').click();\ncy.wait('@getBooks').should(({\n  response\n}) => {\n  cy.get('tr').should('have.length', response.body.length + 1);\n});\ncy.get('p').should('have.text', 'Oops only 1 Book available');",
+              "code": "cy.intercept({\n  method: 'GET',\n  url: 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty'\n}, {\n  statusCode: 200,\n  body: [{\n    book_name: \"Clean Code\",\n    isbn: \"CC\",\n    aisle: \"2301\"\n  }]\n}).as('getBooks');\ncy.get('button[routerlink=\"/library\"]').click();\ncy.wait('@getBooks').should(({\n  response\n}) => {\n  cy.get('tr').should('have.length', response.body.length + 1);\n});\ncy.get('p').should('have.text', 'Oops only 1 Book available');",
               "err": {},
-              "uuid": "80e2ac9c-9f7e-46ea-9566-66eaa35cd73e",
-              "parentUUID": "a51e711c-102e-42dc-917f-7de067420086",
+              "uuid": "20901403-5fab-40ac-a355-cea9ca75433c",
+              "parentUUID": "ebd46da4-3d33-4f13-bdcd-42994796a3cf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Status code validation",
+              "fullTitle": "Intercept Status code validation",
+              "timedOut": null,
+              "duration": 693,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('GET', 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty', req => {\n  req.url = 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=malhotra';\n  req.continue(response => {// expect(response.statusCode).to.equal(403);\n  });\n}).as('dummyUrl');\ncy.get('button[routerlink=\"/library\"]').click();\ncy.wait('@dummyUrl');",
+              "err": {},
+              "uuid": "a5b8d823-1b56-41f4-bba1-9768dbd9a6f7",
+              "parentUUID": "ebd46da4-3d33-4f13-bdcd-42994796a3cf",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "80e2ac9c-9f7e-46ea-9566-66eaa35cd73e"
+            "20901403-5fab-40ac-a355-cea9ca75433c",
+            "a5b8d823-1b56-41f4-bba1-9768dbd9a6f7"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1627,
+          "duration": 2388,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

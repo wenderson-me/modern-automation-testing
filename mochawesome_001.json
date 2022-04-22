@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T05:13:32.713Z",
-    "end": "2022-04-22T05:13:40.507Z",
-    "duration": 7794,
+    "start": "2022-04-22T05:50:09.117Z",
+    "end": "2022-04-22T05:50:17.767Z",
+    "duration": 8650,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "cd74f222-1713-4aa7-8827-7d706ef7e2c9",
+      "uuid": "ba2016bc-ac3d-4c4f-9441-7cd0523085a2",
       "title": "",
       "fullFile": "cypress/integration/session1/addProduct.spec.js",
       "file": "cypress/integration/session1/addProduct.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f95ca776-e0a9-406a-8b97-64d1db8ffd37",
+          "uuid": "94cf0389-c0a7-4fec-b4d6-55bd1d9d79a4",
           "title": "Add product to cart",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Add product",
               "fullTitle": "Add product to cart Add product",
               "timedOut": null,
-              "duration": 6526,
+              "duration": 7175,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit(Cypress.env('url') + '/seleniumPractise/#/');\ncy.get('.products').as('productLocator');\ncy.get('input.search-keyword').type('ca');\ncy.wait(2000);\ncy.get('div.product:visible').should('have.length', 4);\ncy.get('@productLocator').find('.product').should('have.length', 4);\ncy.get('@productLocator').find('.product').eq(2).contains('ADD TO CART').click();\nconsole.log('test');\ncy.get('@productLocator').find('.product').each($el => {\n  const textVeg = $el.find('h4.product-name').text();\n  if (textVeg.includes('Cashews')) {\n    cy.wrap($el).find('button').click();\n  }\n});\ncy.get('.brand').should('have.text', 'GREENKART');\nconst logo = cy.get('.brand').then(logoelement => {\n  cy.log(logoelement.text());\n});",
               "err": {},
-              "uuid": "7e4df099-d918-4c55-835f-be2fb0f9a8fc",
-              "parentUUID": "f95ca776-e0a9-406a-8b97-64d1db8ffd37",
+              "uuid": "0bc076ac-0cf1-4241-9a97-8cdc4feaf2f0",
+              "parentUUID": "94cf0389-c0a7-4fec-b4d6-55bd1d9d79a4",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7e4df099-d918-4c55-835f-be2fb0f9a8fc"
+            "0bc076ac-0cf1-4241-9a97-8cdc4feaf2f0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6526,
+          "duration": 7175,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

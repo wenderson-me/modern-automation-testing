@@ -2,6 +2,7 @@
   "env": {
     "url": "https://rahulshettyacademy.com"
   },
+  "modifyObstructiveCode": false,
   "defaultCommandTimeout": 9000,
   "chromeWebSecurity": false,
   "watchForFileChanges": true,

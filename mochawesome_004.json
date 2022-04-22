@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T04:30:18.695Z",
-    "end": "2022-04-22T04:30:31.704Z",
-    "duration": 13009,
+    "start": "2022-04-22T05:14:44.064Z",
+    "end": "2022-04-22T05:14:55.678Z",
+    "duration": 11614,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3fc93b25-2322-4256-b313-4907279f9d69",
+      "uuid": "cf3f3fac-7f73-463a-bbb0-70a4ea9edbde",
       "title": "",
       "fullFile": "cypress/integration/session1/inputs.spec.js",
       "file": "cypress/integration/session1/inputs.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "834e6a46-820f-4b54-88dc-9d47709de8de",
+          "uuid": "756b3903-349c-4195-9db9-a3fb5cff1325",
           "title": "Practice page",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Get and verify inputs",
               "fullTitle": "Practice page Get and verify inputs",
               "timedOut": null,
-              "duration": 10966,
+              "duration": 9704,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit(Cypress.env('url') + '/AutomationPractice/');\n/**\n * Checkbox\n * */\ncy.get('#checkBoxOption1').check().should('be.checked').and('have.value', 'option1');\ncy.get('#checkBoxOption1').uncheck().should('not.be.checked');\ncy.get(\"fieldset input[type='checkbox']\").check(['option1', 'option3']);\n/**\n * Static dropdown\n * */\ncy.get('#dropdown-class-example').select('option3').should('have.value', 'option3');\n/**\n * Dynamic dropdown\n * */\ncy.get('input#autocomplete').type('Br');\ncy.get('li.ui-menu-item div').each($el => {\n  if ($el.text() === 'Brazil') {\n    cy.wrap($el).click();\n  }\n});\ncy.get('input#autocomplete').should('have.value', 'Brazil');\n/**\n * Visible invisible\n */\ncy.get('#displayed-text').should('be.visible');\ncy.get('#hide-textbox').click();\ncy.get('#displayed-text').should('not.be.visible');\ncy.get('#show-textbox').click();\ncy.get('#displayed-text').should('be.visible');\n/**\n * Radio button\n */\ncy.get(\"[value='radio2']\").check().should('be.checked');\ncy.get(\"[value='radio1']\").should('not.be.checked');\ncy.get(\"[value='radio3']\").should('not.be.checked');\n/**\n * Alert button\n */\ncy.get('#alertbtn').click();\ncy.get(\"[value='Confirm']\").click(); // window:alert\ncy.on('window:alert', str => {\n  // Mocha\n  expect(str).to.equal('Hello , share this practice page and share your knowledge');\n}); // window:confirm\ncy.on('window:confirm', str => {\n  // Mocha\n  expect(str).to.equal('Hello , Are you sure you want to confirm?');\n});\n/**\n * Swith tab\n */\ncy.get('#opentab').invoke('removeAttr', 'target', '_blank').click();\ncy.url().should('include', 'https://www.rahulshettyacademy.com/');\ncy.go('back');\ncy.url().should('include', 'AutomationPractice');",
               "err": {},
-              "uuid": "f0464407-7bc3-4504-9cd6-f3f663aa31bd",
-              "parentUUID": "834e6a46-820f-4b54-88dc-9d47709de8de",
+              "uuid": "87c60cc8-334e-48b0-b0d1-1ad1b1ab5389",
+              "parentUUID": "756b3903-349c-4195-9db9-a3fb5cff1325",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f0464407-7bc3-4504-9cd6-f3f663aa31bd"
+            "87c60cc8-334e-48b0-b0d1-1ad1b1ab5389"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10966,
+          "duration": 9704,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

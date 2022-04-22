@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T04:29:17.017Z",
-    "end": "2022-04-22T04:29:22.021Z",
-    "duration": 5004,
+    "start": "2022-04-22T05:13:27.733Z",
+    "end": "2022-04-22T05:13:31.562Z",
+    "duration": 3829,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4c2863e3-19b4-4fb3-922f-be6892efd83f",
+      "uuid": "70fdeeb0-e52a-402a-95d4-d777acf1402d",
       "title": "",
       "fullFile": "cypress/integration/intercept/getBook.spec.js",
       "file": "cypress/integration/intercept/getBook.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "dd55b7cf-7ee0-4a2c-bcea-21fd8032bc4e",
+          "uuid": "a51e711c-102e-42dc-917f-7de067420086",
           "title": "Intercept",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Get book",
               "fullTitle": "Intercept Get book",
               "timedOut": null,
-              "duration": 1772,
+              "duration": 1627,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.visit(Cypress.env('url') + '/angularAppdemo/');\ncy.intercept({\n  method: 'GET',\n  url: 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty'\n}, {\n  statusCode: 200,\n  body: [{\n    book_name: \"RestAssured with Java\",\n    isbn: \"RSU\",\n    aisle: \"2301\"\n  }]\n}).as('getBooks');\ncy.get('button[routerlink=\"/library\"]').click();\ncy.wait('@getBooks');\ncy.get('p').should('have.text', 'Oops only 1 Book available');",
+              "code": "cy.visit(Cypress.env('url') + '/angularAppdemo/');\ncy.intercept({\n  method: 'GET',\n  url: 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty'\n}, {\n  statusCode: 200,\n  body: [{\n    book_name: \"Clean Code\",\n    isbn: \"CC\",\n    aisle: \"2301\"\n  }]\n}).as('getBooks');\ncy.get('button[routerlink=\"/library\"]').click();\ncy.wait('@getBooks').should(({\n  response\n}) => {\n  cy.get('tr').should('have.length', response.body.length + 1);\n});\ncy.get('p').should('have.text', 'Oops only 1 Book available');",
               "err": {},
-              "uuid": "4a472a13-0a72-435f-8b35-d91cd827e19b",
-              "parentUUID": "dd55b7cf-7ee0-4a2c-bcea-21fd8032bc4e",
+              "uuid": "80e2ac9c-9f7e-46ea-9566-66eaa35cd73e",
+              "parentUUID": "a51e711c-102e-42dc-917f-7de067420086",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "4a472a13-0a72-435f-8b35-d91cd827e19b"
+            "80e2ac9c-9f7e-46ea-9566-66eaa35cd73e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1772,
+          "duration": 1627,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

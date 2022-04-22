@@ -5,6 +5,7 @@ describe('Intercept', () => {
   beforeEach(() => {
     cy.visit(Cypress.env('url') + '/angularAppdemo/');
   });
+
   it('Get book', () => {
     cy.intercept({
       method: 'GET',

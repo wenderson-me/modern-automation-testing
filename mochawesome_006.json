@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T04:29:48.071Z",
-    "end": "2022-04-22T04:29:54.423Z",
-    "duration": 6352,
+    "start": "2022-04-22T04:30:41.143Z",
+    "end": "2022-04-22T04:30:47.995Z",
+    "duration": 6852,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "80d91b5c-b7aa-4d3d-851b-b6d4309d042d",
+      "uuid": "4d9d5964-54e6-4743-a993-a4629ee51014",
       "title": "",
       "fullFile": "cypress/integration/session1/searchProduct.spec.js",
       "file": "cypress/integration/session1/searchProduct.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7b07bd1f-effb-462b-ba86-bd1435aa3051",
+          "uuid": "bead8da5-adda-40be-9346-07355fb311dd",
           "title": "Search product",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Search product",
               "fullTitle": "Search product Search product",
               "timedOut": null,
-              "duration": 5010,
+              "duration": 5086,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit(Cypress.env('url') + '/seleniumPractise/#/');\ncy.get('input.search-keyword').type('ca');\ncy.wait(2000);\ncy.get('.products').find('.product').each($el => {\n  const textVeg = $el.find('h4.product-name').text();\n  if (textVeg.includes('Cashews')) {\n    cy.wrap($el).find('button').click();\n  }\n});\ncy.get('.cart-icon > img').click();\ncy.contains('PROCEED TO CHECKOUT').click();\ncy.contains('Place Order').click();",
               "err": {},
-              "uuid": "680159bb-36a5-4535-949b-d09f6bea6304",
-              "parentUUID": "7b07bd1f-effb-462b-ba86-bd1435aa3051",
+              "uuid": "2b8a5cbd-96e5-4bd5-b59f-57bf1ea28560",
+              "parentUUID": "bead8da5-adda-40be-9346-07355fb311dd",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "680159bb-36a5-4535-949b-d09f6bea6304"
+            "2b8a5cbd-96e5-4bd5-b59f-57bf1ea28560"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5010,
+          "duration": 5086,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

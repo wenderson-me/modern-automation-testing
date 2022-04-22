@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T04:28:09.687Z",
-    "end": "2022-04-22T04:28:13.666Z",
-    "duration": 3979,
+    "start": "2022-04-22T04:29:17.017Z",
+    "end": "2022-04-22T04:29:22.021Z",
+    "duration": 5004,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "0d02c655-1f96-4923-b0c9-2a1eae39da0a",
+      "uuid": "4c2863e3-19b4-4fb3-922f-be6892efd83f",
       "title": "",
       "fullFile": "cypress/integration/intercept/getBook.spec.js",
       "file": "cypress/integration/intercept/getBook.spec.js",
@@ -27,8 +27,8 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8e3f19d4-9f8e-482a-8c8d-c74150b49eb2",
-          "title": "API",
+          "uuid": "dd55b7cf-7ee0-4a2c-bcea-21fd8032bc4e",
+          "title": "Intercept",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
@@ -36,9 +36,9 @@
           "tests": [
             {
               "title": "Get book",
-              "fullTitle": "API Get book",
+              "fullTitle": "Intercept Get book",
               "timedOut": null,
-              "duration": 1732,
+              "duration": 1772,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit(Cypress.env('url') + '/angularAppdemo/');\ncy.intercept({\n  method: 'GET',\n  url: 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty'\n}, {\n  statusCode: 200,\n  body: [{\n    book_name: \"RestAssured with Java\",\n    isbn: \"RSU\",\n    aisle: \"2301\"\n  }]\n}).as('getBooks');\ncy.get('button[routerlink=\"/library\"]').click();\ncy.wait('@getBooks');\ncy.get('p').should('have.text', 'Oops only 1 Book available');",
               "err": {},
-              "uuid": "c2753e86-157a-4f6c-9203-b875fc1ba677",
-              "parentUUID": "8e3f19d4-9f8e-482a-8c8d-c74150b49eb2",
+              "uuid": "4a472a13-0a72-435f-8b35-d91cd827e19b",
+              "parentUUID": "dd55b7cf-7ee0-4a2c-bcea-21fd8032bc4e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c2753e86-157a-4f6c-9203-b875fc1ba677"
+            "4a472a13-0a72-435f-8b35-d91cd827e19b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1732,
+          "duration": 1772,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

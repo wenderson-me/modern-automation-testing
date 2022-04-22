@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T04:29:55.584Z",
-    "end": "2022-04-22T04:30:02.624Z",
-    "duration": 7040,
+    "start": "2022-04-22T04:30:49.104Z",
+    "end": "2022-04-22T04:30:55.926Z",
+    "duration": 6822,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f66c0587-d216-4178-a1a6-4ae5b146b351",
+      "uuid": "7ee8d247-80b2-4cc3-8229-1afbff425774",
       "title": "",
       "fullFile": "cypress/integration/session1/tables.spec.js",
       "file": "cypress/integration/session1/tables.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e3f3179b-b214-4afc-a1ab-4e88b0bca082",
+          "uuid": "07a50399-cd42-4ca3-9c40-58309264fe87",
           "title": "Get content in tables",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Get Title and Number in table",
               "fullTitle": "Get content in tables Get Title and Number in table",
               "timedOut": null,
-              "duration": 5498,
+              "duration": 5244,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "/**\n * Hadling tables using each command\n */\ncy.visit(Cypress.env('url') + '/AutomationPractice/');\ncy.get('tr td:nth-child(2)').each(($e1, index) => {\n  const text = $e1.text();\n  if (text.includes('Python')) {\n    cy.get('tr td:nth-child(2)').eq(index).next().then(price => {\n      expect(price.text(), 'Preço').to.equal('25');\n    });\n  }\n});",
               "err": {},
-              "uuid": "b76e5b04-3d7c-4965-9776-49460a145ab5",
-              "parentUUID": "e3f3179b-b214-4afc-a1ab-4e88b0bca082",
+              "uuid": "c192e7f5-201e-4a18-83d2-043cad704b37",
+              "parentUUID": "07a50399-cd42-4ca3-9c40-58309264fe87",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b76e5b04-3d7c-4965-9776-49460a145ab5"
+            "c192e7f5-201e-4a18-83d2-043cad704b37"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5498,
+          "duration": 5244,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

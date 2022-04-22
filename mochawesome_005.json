@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T04:29:40.390Z",
-    "end": "2022-04-22T04:29:46.920Z",
-    "duration": 6530,
+    "start": "2022-04-22T04:30:32.847Z",
+    "end": "2022-04-22T04:30:39.971Z",
+    "duration": 7124,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3b7d37d8-4c8b-4f84-84c6-147e43e6c9ad",
+      "uuid": "9f06c8de-bb26-43ad-a898-893f8cf13eb2",
       "title": "",
       "fullFile": "cypress/integration/session1/mouseHover.js",
       "file": "cypress/integration/session1/mouseHover.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2aa77dc9-8470-4f49-909a-ca9553f0b8b4",
+          "uuid": "b44cfac8-c121-4c73-b065-9dbcd813b6c6",
           "title": "Mouse Hover",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Click in button hover",
               "fullTitle": "Mouse Hover Click in button hover",
               "timedOut": null,
-              "duration": 4848,
+              "duration": 5574,
               "state": "passed",
-              "speed": "fast",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit(Cypress.env('url') + '/AutomationPractice/');\ncy.get('.mouse-hover-content').invoke('show');\ncy.contains('Top').click();\ncy.url().should('include', 'top');",
               "err": {},
-              "uuid": "6b39d8a0-bf77-4218-938e-2f4dd5ab7038",
-              "parentUUID": "2aa77dc9-8470-4f49-909a-ca9553f0b8b4",
+              "uuid": "82162ff7-e985-4729-9d07-13203ad1080a",
+              "parentUUID": "b44cfac8-c121-4c73-b065-9dbcd813b6c6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6b39d8a0-bf77-4218-938e-2f4dd5ab7038"
+            "82162ff7-e985-4729-9d07-13203ad1080a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4848,
+          "duration": 5574,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

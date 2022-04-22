@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T04:29:12.653Z",
-    "end": "2022-04-22T04:29:24.645Z",
-    "duration": 11992,
+    "start": "2022-04-22T04:30:06.449Z",
+    "end": "2022-04-22T04:30:17.481Z",
+    "duration": 11032,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "0d528f7a-7d08-486e-8e0c-52372346076f",
+      "uuid": "e4f855b7-4f43-49c4-9010-a47826008aa9",
       "title": "",
       "fullFile": "cypress/integration/session1/Iframe.spe.js",
       "file": "cypress/integration/session1/Iframe.spe.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "93568386-8aad-4d44-8680-95a446115ff2",
+          "uuid": "900fccbf-8ffb-40e9-b54f-8a44f82f0239",
           "title": "Iframe",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Manupilating Iframe",
               "fullTitle": "Iframe Manupilating Iframe",
               "timedOut": null,
-              "duration": 10007,
+              "duration": 8985,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit(Cypress.env('url') + '/AutomationPractice/');\ncy.frameLoaded('#courses-iframe');\ncy.iframe().find('a[href=\"/mentorship\"]').eq(0).click();\ncy.wait(500);\ncy.iframe().find('div h1.pricing-title').should('have.length', 2);",
               "err": {},
-              "uuid": "b2426eb9-29a7-4728-afe2-6d2a2afd384c",
-              "parentUUID": "93568386-8aad-4d44-8680-95a446115ff2",
+              "uuid": "31c9ef38-c8df-4b2f-a4bf-f85ebe31960d",
+              "parentUUID": "900fccbf-8ffb-40e9-b54f-8a44f82f0239",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b2426eb9-29a7-4728-afe2-6d2a2afd384c"
+            "31c9ef38-c8df-4b2f-a4bf-f85ebe31960d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10007,
+          "duration": 8985,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

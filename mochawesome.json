@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-22T05:50:02.860Z",
-    "end": "2022-04-22T05:50:07.581Z",
-    "duration": 4721,
+    "start": "2022-04-23T05:45:07.749Z",
+    "end": "2022-04-23T05:45:12.137Z",
+    "duration": 4388,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ab7a68a2-ca36-4f27-b9eb-40fd00294acf",
+      "uuid": "24045ab4-5b89-429f-afa8-a3c15c1d50dd",
       "title": "",
       "fullFile": "cypress/integration/intercept/getBook.spec.js",
       "file": "cypress/integration/intercept/getBook.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ebd46da4-3d33-4f13-bdcd-42994796a3cf",
+          "uuid": "52daad3f-5edb-4df8-b35a-19304140f11d",
           "title": "Intercept",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Get book",
               "fullTitle": "Intercept Get book",
               "timedOut": null,
-              "duration": 1695,
+              "duration": 1643,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.intercept({\n  method: 'GET',\n  url: 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty'\n}, {\n  statusCode: 200,\n  body: [{\n    book_name: \"Clean Code\",\n    isbn: \"CC\",\n    aisle: \"2301\"\n  }]\n}).as('getBooks');\ncy.get('button[routerlink=\"/library\"]').click();\ncy.wait('@getBooks').should(({\n  response\n}) => {\n  cy.get('tr').should('have.length', response.body.length + 1);\n});\ncy.get('p').should('have.text', 'Oops only 1 Book available');",
               "err": {},
-              "uuid": "20901403-5fab-40ac-a355-cea9ca75433c",
-              "parentUUID": "ebd46da4-3d33-4f13-bdcd-42994796a3cf",
+              "uuid": "c5577940-9892-4980-8341-b5d29de5582d",
+              "parentUUID": "52daad3f-5edb-4df8-b35a-19304140f11d",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Status code validation",
               "fullTitle": "Intercept Status code validation",
               "timedOut": null,
-              "duration": 693,
+              "duration": 629,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.intercept('GET', 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty', req => {\n  req.url = 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=malhotra';\n  req.continue(response => {// expect(response.statusCode).to.equal(403);\n  });\n}).as('dummyUrl');\ncy.get('button[routerlink=\"/library\"]').click();\ncy.wait('@dummyUrl');",
               "err": {},
-              "uuid": "a5b8d823-1b56-41f4-bba1-9768dbd9a6f7",
-              "parentUUID": "ebd46da4-3d33-4f13-bdcd-42994796a3cf",
+              "uuid": "72331da4-3e0a-429e-9fa3-a15da6ebf5c8",
+              "parentUUID": "52daad3f-5edb-4df8-b35a-19304140f11d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "20901403-5fab-40ac-a355-cea9ca75433c",
-            "a5b8d823-1b56-41f4-bba1-9768dbd9a6f7"
+            "c5577940-9892-4980-8341-b5d29de5582d",
+            "72331da4-3e0a-429e-9fa3-a15da6ebf5c8"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2388,
+          "duration": 2272,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
